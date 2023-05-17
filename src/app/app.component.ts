@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'TokenTracker';
+  SelectedCurrency: string = 'USD';
+
+  constructor(){
+
+
+  }
+  sendCurrency(event:string){
+     console.log(event);
+  }
 }
