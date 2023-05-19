@@ -1,3 +1,4 @@
+import { Route, Router, RouterModule } from '@angular/router';
 import { Component, OnInit ,AfterViewInit , ViewChild } from '@angular/core';
 import { ApiService } from '../servi/api.service';
 import {MatPaginator} from '@angular/material/paginator';
@@ -19,7 +20,7 @@ export class CoinListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api : ApiService ) { }
+  constructor(private api : ApiService, private router : Router) { }
 
   ngOnInit(): void {
     this.getAlllData();
@@ -41,13 +42,17 @@ export class CoinListComponent implements OnInit {
   
     })
   }
-  applyFilter(event: Event) {
+  applyFilter(event: Event) { 
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  gotoDetails(row: any)  {
+    this.router.navigate(['coin-details',row.id])
   }
 }
   
