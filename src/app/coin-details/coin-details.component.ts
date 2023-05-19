@@ -1,4 +1,7 @@
+import { ApiService } from './../servi/api.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coin-details',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoinDetailsComponent implements OnInit {
 
-  constructor() { }
+  coinData:any
+  coinID ! :string;
+  days : number= 1; 
+  currency : string = 'USD';
+
+  constructor(private api : ApiService, private activatedRoute : ActivatedRoute  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(val=>{
+       this.coinID = val ['id'];  
+    });
+    this.getCoinData();
   }
+
+ getCoinData() {
+  this.api.getCurrencyById (this.coinID  )
+  .subscribe(res=>{this.coinData = res; console.log(this.coinData)})
+ }
 
 }
