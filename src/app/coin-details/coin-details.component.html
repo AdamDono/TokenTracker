@@ -11,7 +11,7 @@
             <h2 [innerHTML]="coinData?.description?.en.split( '. ')[0]"></h2>
             <div class="more-details">  <span class="title" >Rank: </span> <span class="Value" >{{coinData?.market_cap_rank}}</span><br> <br>
              <span class="title" >Curent Price:  </span> <span class="Value" >{{coinData?.market_data.current_price.usd | currency }}</span> <br> <br>
-             <span class="title" >MarketCap: </span> <span class="Value" >{{coinData?.market_data.market_cap.usd | currency}}</span> 
+             <span class="title" >MarketCap: </span> <span class="Value" >{{coinData?.market_cap.market_cap.usd | currency  }}</span> 
            
             
             </div>
