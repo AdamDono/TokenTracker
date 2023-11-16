@@ -34,7 +34,7 @@ export class CoinListComponent implements OnInit {
     })
   }
   getAlllData()
-  {this.api.getCurrency("INR")
+  {this.api.getCurrency("USD")
     .subscribe(res =>
       {console.log(res);
       this.dataSource = new MatTableDataSource(res);
