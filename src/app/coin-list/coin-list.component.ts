@@ -28,7 +28,7 @@ export class CoinListComponent implements OnInit {
     this.getBannerData ();
   }
   getBannerData()
-  {this.api.getTrendingCurrency("INR")
+  {this.api.getTrendingCurrency("USD")
     .subscribe(res =>{console.log(res);
       this.bannerData = res;
     })
