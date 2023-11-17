@@ -1,7 +1,8 @@
 .details {
+
     width: 30%;
     display: flex;
-    margin-top: 25px;
+    margin-top: 105px;
     align-items: center;
     border-right: 2px solid rgb(233, 228, 228);
     flex-direction: column;
@@ -87,5 +88,71 @@
 }
 
 .row{
-    margin-top: 80px;
+    margin-top: 0px;
+}
+
+
+@media screen and (max-width: 767px) {
+/* Default Styles */
+.details {
+    width: 100%; /* Adjusted width for smaller screens */
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    flex-direction: column;
+    border-right: none; /* Removed border for smaller screens */
+    margin-left: 0; /* Removed left margin for smaller screens */
+}
+
+.img {
+    background: transparent;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    img {
+        margin: auto;
+        display: flex;
+        max-width: 100%; /* Ensures images don't overflow on smaller screens */
+    }
+}
+
+.more-detail {
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.5; /* Improved line-height for better readability */
+}
+
+.btn-custom {
+    color: #c84c4c;
+    background: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #fff;
+    width: 100%; /* Adjusted width for smaller screens */
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+.btn-custom:focus {
+    background: #009688;
+    font-weight: 700;
+    font-size: 18px;
+    border: 1px solid #009688;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.btn {
+    margin-left: 0; /* Removed left margin for smaller screens */
+    margin-bottom: 20px;
+}
+
+.row {
+    margin-top: 20px; /* Reduced margin for smaller screens */
+}
+
+
+  
+      
 }

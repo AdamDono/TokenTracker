@@ -34,6 +34,7 @@ margin-top: 60px;
     height: 50%;
     display: flex;
     align-items: center;
+    margin-left: 100px;
 }
 
 .card{
@@ -97,4 +98,36 @@ table {
 .la-google-play{
     color: #009688;
     font-size: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .banner {
+        background-image: url(../../assets/banner2.jpeg);
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0;
+        color: #fff;
+        text-align: center;
+      }
+  
+      .header {
+        margin-bottom: 20px;
+      }
+  
+      .sub-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+  
+      .card {
+        border: 0;
+        background: transparent;
+        color: #fff;
+        margin: 10px;
+        padding: 15px;
+        width: 100%;
+        max-width: 200px;
+      }
 }
