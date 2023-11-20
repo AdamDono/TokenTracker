@@ -15,7 +15,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class CoinListComponent implements OnInit {
 
   bannerData: any = [];
-  currency : string = "INR"
+  currency : string = "USD"
   dataSource!: MatTableDataSource<any>; 
   displayedColumns: string[] = ['symbol', 'current_price', 'price_change_percentage_24h', 'market_cap'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
